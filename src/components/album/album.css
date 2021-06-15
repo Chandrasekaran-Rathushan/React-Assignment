@@ -1,0 +1,27 @@
+.container-fluid .card {
+    width: 55rem;
+    display: inline-flex;
+    margin: 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.link {
+    color: skyblue;
+}
+
+
+
+.link:hover{
+    color: seashell;
+}
+
+
+@media only screen and (max-width: 1880px) {
+    
+    .container-fluid .card {
+        width: 25rem;
+        display: inline-flex;
+        margin: 1rem 1rem;
+    }
+}
+
