@@ -13,9 +13,7 @@ const Album = ({ load_albums }) => {
     // albums is an array where all album elements are stored
     const albums = useSelector(state => state.auth.albums);
 
-
     const renderAlbums = albums.map((album) => {
-
         // when user clicks on a album, album id will be stored in ALBUM_ID variable.
         const onClick = e => {
             ALBUM_ID = album.id;
@@ -33,7 +31,6 @@ const Album = ({ load_albums }) => {
         );
     })
 
-
     // useEffect Hook used to get data from api.
     useEffect(() => {
        load_albums();
@@ -43,12 +40,8 @@ const Album = ({ load_albums }) => {
 
     return (
         <div className="container-fluid">
-            <div style={{marginLeft: '2rem'}}>
-                {renderAlbums}   
-            </div>
+            {renderAlbums}  
         </div>
     );
 }
-
-
 export default connect(null, { load_albums })(Album);

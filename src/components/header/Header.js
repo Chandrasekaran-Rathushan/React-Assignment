@@ -1,25 +1,37 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './Header.css';
 
-const Header = () => {
 
-    return (
-        
-        <nav className="navbar navbar-expand-lg navbar navbar-dark bg-primary">
-            <a href="/" className="navbar-brand"><h1>Albums</h1></a>
-            <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse2">
-                <span className="navbar-toggler-icon"></span>
-             </button>
+class Header extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+            className: '',
+        }
+    }
 
-            <div className="collapse navbar-collapse" id="navbarCollapse2">
-                <div className="navbar-nav">
-                    <NavLink to="/photos" className="nav-item nav-link active"><h5 style={{marginTop: '8px'}}>Photos</h5></NavLink>
-                </div>
-            </div>
-    </nav>
-    );
+    onClick(){
+        console.log("cliekd")
+        const pathname = window.location.pathname;
+        console.log(pathname);
+        var isActive = pathname === this.props.to;
+        this.setState({className: isActive ? 'active' : ''});
+        console.log(pathname + " " + this.props.to);
+    }
+
+    render () {
+
+        return(
+            <nav className="navibar">
+            <ul onClick={() => this.onClick()}>
+                <li className={this.state.className} to="/"><NavLink to="/">Albums</NavLink></li>
+                <li className={this.state.className} to="/photos"><NavLink to="/photos">Photos</NavLink></li>
+            </ul> 
+        </nav>
+        );
+    }
+
 }
-
-
-
 export default Header;
+

@@ -1,6 +1,14 @@
-.container .card {
+.container {
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container>.card {
+    display: inline;
     width: 22rem;
-    display: inline-flex;
     margin: 1rem 0.5rem;
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -16,24 +24,5 @@
 .card:hover * {
     cursor: pointer;
     color: skyblue;
-    width: 101%;
 
-}
-
-@media only screen and (min-width: 700) {
-    
-    .container .card {
-        height: 500px;;
-        display: block;
-        margin: 0 auto;
-    }
-}
-
-@media only screen and (max-width: 1880px) {
-    
-    .container .card {
-        width: 25rem;
-        display: inline-flex;
-        margin: 1rem 1rem;
-    }
 }

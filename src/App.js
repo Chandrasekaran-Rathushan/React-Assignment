@@ -6,8 +6,10 @@ import Album from './components/album/Album';
 import { Switch, BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import Thumbnails from './components/thumbnail/Thumbnail';
 import Header from './components/header/Header.js';
+// import { ALBUM_ID } from './components/album/Album';
 
 function App() {
+  // var photo_url = `photos?albumId=${ALBUM_ID}`;
   
   return (
     <div className="App">
