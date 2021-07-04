@@ -28,23 +28,18 @@
     justify-content: center;
 }
 
+  /* Style the active class, and buttons on mouse-over */
 .navibar ul>li:hover {
     background-color: rgba(0, 123, 255, 0.2);
     font-size: 105%;
 }
   
-  /* Style the active class, and buttons on mouse-over */
-.navibar ul li .maio{
-    width: 20rem;
-    height: 4rem;
-    position: relative;
+/* Style the active class*/
+.active{
+    background-color: rgba(94, 172, 255, 0.3);
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.active{
-    background-color: rgba(94, 172, 255, 0.3);
-    width: 20rem;
-    height: 4rem;
 }
