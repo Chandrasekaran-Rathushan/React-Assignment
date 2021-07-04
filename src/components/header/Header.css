@@ -14,7 +14,7 @@
 .navibar>ul  {
     height: 4rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     font-weight: 500;
     
@@ -22,10 +22,13 @@
 
 .navibar ul>li {
     display: inline-flex;
-    height: 4rem;
     align-items: center;
-    width: 20rem;
     justify-content: center;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: aquas;
 }
 
   /* Style the active class, and buttons on mouse-over */
@@ -41,5 +44,5 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
